@@ -1,0 +1,14 @@
+.services-list{display:flex;flex-direction:column;}
+.svc-row{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;border-bottom:0.5px solid rgba(255,255,255,0.05);transition:padding-left .2s;}
+.svc-row:hover{padding-left:8px;}
+.svc-row:last-child{border-bottom:none;}
+.svc-name{font-size:14px;color:#aaa;display:flex;align-items:center;gap:10px;}
+.svc-row:nth-child(1) .svc-name i{color:rgba(120,80,255,0.6);}
+.svc-row:nth-child(2) .svc-name i{color:rgba(0,180,120,0.6);}
+.svc-row:nth-child(3) .svc-name i{color:rgba(255,120,50,0.6);}
+.svc-row:nth-child(4) .svc-name i{color:rgba(120,80,255,0.5);}
+.svc-row:nth-child(1):hover .svc-name{color:rgba(120,80,255,0.9);}
+.svc-row:nth-child(2):hover .svc-name{color:rgba(0,180,120,0.9);}
+.svc-row:nth-child(3):hover .svc-name{color:rgba(255,120,50,0.9);}
+.svc-row:nth-child(4):hover .svc-name{color:rgba(120,80,255,0.8);}
+.svc-badge{font-family:var(--mono);font-size:10px;color:#666;letter-spacing:.08em;}

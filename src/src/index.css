@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+:root {
+  --bg:#0d0d10; --bg2:#1a1a1e; --bg3:#222226;
+  --purple:rgba(120,80,255,1); --purpleA:rgba(120,80,255,0.8); --purpleD:rgba(120,80,255,0.15);
+  --green:rgba(0,180,120,1); --greenA:rgba(0,180,120,0.8); --greenD:rgba(0,180,120,0.12);
+  --orange:rgba(255,120,50,1); --orangeA:rgba(255,120,50,0.8); --orangeD:rgba(255,120,50,0.1);
+  --font:'Syne',sans-serif; --mono:'Space Mono',monospace;
+}
+
+html { scroll-behavior:smooth; }
+body { background:var(--bg); color:#f0f0f0; font-family:var(--font); min-height:100vh; overflow-x:hidden; }
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes scan{0%{top:-8%}100%{top:108%}}
+@keyframes glitch{0%,93%,100%{transform:none;clip-path:none}94%{transform:skewX(-3deg) translateX(3px);clip-path:inset(10% 0 70% 0)}96%{transform:skewX(2deg) translateX(-2px);clip-path:inset(70% 0 5% 0)}}
+@keyframes gridMove{from{transform:translateY(0)}to{transform:translateY(40px)}}
+@keyframes gradShift{0%{opacity:0.18}50%{opacity:0.32}100%{opacity:0.18}}
+@keyframes pulse{0%,100%{opacity:0.5;transform:scale(1)}50%{opacity:1;transform:scale(1.2)}}
+@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+
+/* BG */
+.bg-grid{position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,0.012) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.012) 1px,transparent 1px);background-size:44px 44px;animation:gridMove 10s linear infinite;pointer-events:none;z-index:0;}
+.bg-orb{position:fixed;border-radius:50%;filter:blur(90px);animation:gradShift 5s ease infinite;pointer-events:none;z-index:0;}
+.orb1{width:400px;height:400px;background:rgba(120,80,255,0.07);top:-100px;left:-100px;}
+.orb2{width:350px;height:350px;background:rgba(0,180,120,0.05);bottom:-80px;right:-80px;animation-delay:2.5s;}
+.orb3{width:250px;height:250px;background:rgba(255,120,50,0.04);top:40%;right:5%;animation-delay:1.2s;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;justify-content:center;gap:2.5rem;padding:1.2rem 2rem;border-bottom:0.5px solid rgba(255,255,255,0.08);background:rgba(13,13,16,0.94);backdrop-filter:blur(14px);}
+.nav-logo{width:28px;height:28px;position:absolute;left:2rem;top:50%;transform:translateY(-50%);}
+nav a{font-family:var(--mono);font-size:10px;color:#666;text-decoration:none;letter-spacing:.18em;text-transform:uppercase;transition:color .2s;}
+nav a:hover{color:rgba(120,80,255,0.9);}
+
+/* SECTIONS (shared by all section components) */
+section{max-width:1080px;margin:0 auto;padding:3.5rem 2rem;border-bottom:0.5px solid rgba(255,255,255,0.07);opacity:0;transform:translateY(18px);transition:opacity .65s ease,transform .65s ease;position:relative;z-index:1;}
+section.visible{opacity:1;transform:none;}
+.sec-label{font-family:var(--mono);font-size:10px;letter-spacing:.22em;color:#777;text-transform:uppercase;margin-bottom:2rem;display:flex;align-items:center;gap:14px;}
+.sec-label::after{content:'';flex:1;height:0.5px;background:rgba(255,255,255,0.08);}
+
+footer{text-align:center;padding:2.5rem;font-family:var(--mono);font-size:10px;color:#444;letter-spacing:.15em;position:relative;z-index:1;}
