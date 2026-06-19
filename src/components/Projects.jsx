@@ -57,6 +57,24 @@ const projects = [
     },
   },
   {
+    cls: 'pc6',
+    accent: 'teal',
+    type: 'AI · Bot',
+    title: 'SmartBook Assistant',
+    status: 'live',
+    statusLabel: 'Live',
+    desc: 'An AI-powered Telegram bot that handles FAQs and bookings for small businesses — customers get instant answers and can book appointments without any human needed.',
+    impact: 'Fully automated customer interactions — FAQs answered and bookings confirmed 24/7.',
+    tech: ['Node.js', 'Telegram', 'Groq', 'AI'],
+    link: { icon: 'ti-external-link', label: 'Try the bot', url: 'https://t.me/smartbook_assistant_bot' },
+    detail: {
+      problem: 'Small businesses lose customers to slow response times — most can\'t afford to have someone answering repetitive questions and booking requests around the clock. WhatsApp and DMs pile up, and customers don\'t wait.',
+      solution: 'Built a Telegram bot that acts as a 24/7 AI-powered front desk. It answers common customer questions using an AI model trained on the business\'s info — hours, location, services, pricing — and walks customers through a full booking flow, collecting name, date, and service before confirming the appointment.',
+      challenges: 'The main challenge was making the bot context-aware enough to handle both free-form FAQ questions and a structured multi-step booking flow in the same conversation — switching cleanly between the two without confusing the user.',
+      outcome: 'Fully functional and deployed live. Any small business can be onboarded by editing a single config block. Demonstrates practical AI integration, conversational UX design, and backend deployment on a zero-cost stack.',
+    },
+  },
+  {
     cls: 'pc2',
     accent: 'green',
     type: 'Web · Platform',
@@ -112,6 +130,12 @@ const accentMap = {
     pill: { bg: 'rgba(255,120,50,0.09)', border: 'rgba(255,120,50,0.25)', color: 'rgba(255,120,50,0.85)' },
     highlight: { bg: 'rgba(255,120,50,0.07)', border: 'rgba(255,120,50,0.18)', color: 'rgba(255,120,50,0.8)' },
     label: 'rgba(255,120,50,0.35)',
+  },
+  teal: {
+    type: 'rgba(0,220,180,0.8)',
+    pill: { bg: 'rgba(0,220,180,0.09)', border: 'rgba(0,220,180,0.25)', color: 'rgba(0,220,180,0.85)' },
+    highlight: { bg: 'rgba(0,220,180,0.07)', border: 'rgba(0,220,180,0.18)', color: 'rgba(0,220,180,0.8)' },
+    label: 'rgba(0,220,180,0.35)',
   },
 }
 
