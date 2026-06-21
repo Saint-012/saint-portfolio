@@ -44,7 +44,7 @@ const projects = [
     accent: 'green',
     type: 'AI · Tool',
     title: 'Prism',
-    image: '/prism.png',
+    image: '/prism2.png',
     status: 'live',
     statusLabel: 'Live',
     desc: 'Paste any text — articles, notes, documents, reviews — and get back a clean summary, key points, or organized themes. Powered by AI.',
